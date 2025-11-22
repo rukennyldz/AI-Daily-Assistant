@@ -1,48 +1,50 @@
-# AI-Daily-Assistant
-Bu proje, kullanıcının yazdığı günlük cümleleri/duyguları yapay zeka (AI) aracılığıyla analiz eden bir mobil asistan uygulamasıdır. Uygulama, metin girdilerine göre duygu analizi, basit bir özet ve kişiselleştirilmiş bir öneri sunar. Tüm veriler AsyncStorage (lokal) kullanılarak depolanır ve çevrimdışı görüntülenebilir.
-Klasör Yapısı :
-<img width="1422" height="815" alt="Ekran Resmi 2025-11-22 01 23 06" src="https://github.com/user-attachments/assets/329da4c9-f78f-4cae-9a0a-d45c4cf2d4d1" />
-AI Modeli Açıklaması:
-Kullanılan Model: distilbert-base-uncased-finetuned-sst-2-english 
+# Welcome to your Expo app 👋
 
-Platform: Hugging Face Inference API
+This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
 
-Çalışma Prensibi: Model İngilizce metni alıp POSITIVE veya NEGATIVE olarak etiketler. Uygulama bu etiketleri, Duygu Analizi (pozitif/nötr/negatif), Basit Özet ve Öneri çıktılarına dönüştürür.
-AI Araç Kullanım Dokümantasyonu:
+## Get started
 
-Bu proje taslağı, belirlenen tüm gereksinimleri (React Native CLI/TypeScript formatı, AsyncStorage, Hugging Face API entegrasyonu ve modüler dosya yapısı) karşılamak amacıyla Gemini tarafından oluşturulmuştur.
-Kurulum ve Çalıştırma Adımları:
-Ön Koşullar: Node.js, npm/yarn, React Native CLI ortamınızın (JDK, Android Studio/Xcode) kurulu olduğundan emin olun.
+1. Install dependencies
 
-React Native CLI Projesi Oluşturma (TypeScript):
+   ```bash
+   npm install
+   ```
 
-npx react-native init AIDailyAssistant --template react-native-template-typescript
-cd AIDailyAssistant
+2. Start the app
 
+   ```bash
+   npx expo start
+   ```
 
-Gerekli Paketleri Kurma:
+In the output, you'll find options to open the app in a
 
-npm install @react-native-async-storage/async-storage react-native-safe-area-context
-# VEYA
-yarn add @react-native-async-storage/async-storage react-native-safe-area-context
+- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
+- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
+- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
+- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
 
+You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
 
-Yerel Kurulumları Tamamlama (iOS/Android):
+## Get a fresh project
 
-npx pod-install # iOS için
+When you're ready, run:
 
+```bash
+npm run reset-project
+```
 
-Dosyaları Yerleştirme:
-Yukarıdaki dosyaları belirtilen klasörlere (örneğin daily.tsx dosyasını app/daily.tsx yoluna) kopyalayıp yapıştırın.
+This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
 
-AI API Anahtarını Ayarlama (ÇOK ÖNEMLİ):
-utils/storage.ts dosyasını açın ve HF_TOKEN değişkenini kendi Hugging Face API erişim jetonunuz ile değiştirin:
+## Learn more
 
-export const HF_TOKEN = "hf_INSERT_YOUR_HUGGINGFACE_TOKEN_HERE"; 
+To learn more about developing your project with Expo, look at the following resources:
 
+- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
+- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
 
-Uygulamayı Çalıştırma:
+## Join the community
 
-npx react-native run-android
-# VEYA
-npx react-native run-ios
+Join our community of developers creating universal apps.
+
+- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
+- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
